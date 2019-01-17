@@ -13,6 +13,7 @@
     "serve": "npm run build && preact serve",
     "dev": "preact watch --template src/index.ejs",
     "build": "microbundle build",
+    "lint": "tslint -p tsconfig.json",
     "prepack": "microbundle build"
   },
   "keywords": [],
