@@ -12,7 +12,7 @@
     "docs": "preact build --no-prerender --clean --template src/index.ejs --dest docs --service-worker false",
     "serve": "npm run build && preact serve",
     "dev": "preact watch --template src/index.ejs",
-    "build": "yarn build:js && yarn build:ts",
+    "build": "yarn build:js",
     "build:js": "microbundle build",
     "build:ts": "tsc",
     "lint": "tslint -p tsconfig.json",
