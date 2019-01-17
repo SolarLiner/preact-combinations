@@ -2,6 +2,7 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": ".",
+    "outDir": "dist",
     "paths": { "*": ["types/*"] },
     "target": "es2017",
     "module": "esnext",
@@ -9,7 +10,8 @@
     "sourceMap": true,
     "jsx": "react",
     "jsxFactory": "h",
-    "allowJs": true
+    "emitDeclarationOnly": true,
+    "declaration": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules"]
