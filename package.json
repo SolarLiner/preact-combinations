@@ -5,7 +5,7 @@
   "main": "dist/preact-combinations.js",
   "umd:main": "dist/preact-combinations.umd.js",
   "module": "dist/preact-combinations.mjs",
-  "source": "components/combinations/index.tsx",
+  "source": "src/components/combinations/index.tsx",
   "scripts": {
     "test": "NODE_ENV=test jest",
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
