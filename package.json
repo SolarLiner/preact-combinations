@@ -1,7 +1,7 @@
 {
   "name": "preact-combinations",
   "version": "0.1.0",
-  "description": "",
+  "description": "Element rendering all combinations of a provided array of prop values",
   "main": "dist/preact-combinations.js",
   "umd:main": "dist/preact-combinations.umd.js",
   "module": "dist/preact-combinations.mjs",
@@ -12,12 +12,14 @@
     "docs": "preact build --no-prerender --clean --template src/index.ejs --dest docs --service-worker false",
     "serve": "npm run build && preact serve",
     "dev": "preact watch --template src/index.ejs",
-    "build": "microbundle build",
+    "build": "yarn build:js && yarn build:ts",
+    "build:js": "microbundle build",
+    "build:ts": "tsc",
     "lint": "tslint -p tsconfig.json",
     "prepack": "microbundle build"
   },
-  "keywords": [],
-  "author": "Zouhir <zouhir@zouhir.org>",
+  "keywords": ["preact","wrapper","combinations"],
+  "author": "SolarLiner <solarliner@gmail.org>",
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^23.3.12",
