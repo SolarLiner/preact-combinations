@@ -29,14 +29,14 @@ build:
     paths:
       - preact-combinations*.tgz
 
-# pages:
-#   stage: build
-#   script: 
-#     - yarn docs
-#     - mv docs public
-#   artifacts:
-#     paths:
-#     - public
+pages:
+  stage: build
+  script: 
+    - yarn docs
+    - mv docs public
+  artifacts:
+    paths:
+    - public
 
 deploy/dry-run:
   variables:

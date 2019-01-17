@@ -1,4 +1,5 @@
 *
-!dist
-README.md
-LICENSE
+!dist/*.js
+!dist/*.mjs
+!README.md
+!LICENSE
