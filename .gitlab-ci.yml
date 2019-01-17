@@ -1,0 +1,60 @@
+image: node:latest
+
+cache:
+  paths:
+    - node_modules/
+  key: ${CI_COMMIT_REF_SLUG}
+
+before_script: 
+  - yarn
+
+stages:
+  - test
+  - build
+  - deploy
+
+test:
+  stage: test
+  script: yarn test
+
+lint:
+  stage: test
+  allow_failure: true
+  script: yarn lint
+
+build:
+  stage: build
+  script: yarn pack
+  artifacts:
+    paths:
+      - preact-combinations*.tgz
+
+pages:
+  stage: build
+  script: 
+    - yarn docs
+    - mv docs public
+  artifacts:
+    paths:
+    - public
+
+deploy/dry-run:
+  variables:
+    GIT_STRATEGY: none
+  dependencies:
+    - build
+  stage: deploy
+  except:
+    - tags
+    - master
+  script: npm publish `ls preact-combinations*.tgz | head -n1` --dry-run
+
+deploy:
+  variables:
+    GIT_STRATEGY: none
+  dependencies:
+    - build
+  stage: deploy
+  only:
+    - tags
+  script: npm publish `ls preact-combinations*.tgz | head -n1`

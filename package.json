@@ -1,0 +1,89 @@
+{
+  "name": "preact-combinations",
+  "version": "0.1.0",
+  "description": "Element rendering all combinations of a provided array of prop values",
+  "main": "dist/preact-combinations.js",
+  "umd:main": "dist/preact-combinations.umd.js",
+  "module": "dist/preact-combinations.mjs",
+  "source": "src/components/combinations/index.tsx",
+  "scripts": {
+    "test": "NODE_ENV=test jest",
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "docs": "preact build --no-prerender --clean --template src/index.ejs --dest docs --service-worker false --no-production",
+    "serve": "npm run build && preact serve",
+    "dev": "preact watch --template src/index.ejs",
+    "build": "yarn build:js",
+    "build:js": "microbundle build",
+    "build:ts": "tsc",
+    "lint": "tslint -p tsconfig.json",
+    "prepack": "microbundle build"
+  },
+  "keywords": [
+    "preact",
+    "wrapper",
+    "combinations"
+  ],
+  "author": "SolarLiner <solarliner@gmail.org>",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^23.3.12",
+    "awesome-typescript-loader": "^4",
+    "eslint": "^4.5.0",
+    "get-contrast-ratio": "^0.1.4",
+    "identity-obj-proxy": "^3.0.0",
+    "if-env": "^1.0.0",
+    "jest": "^21.2.1",
+    "linkstate": "^1.1.1",
+    "microbundle": "^0.9.0",
+    "node-sass": "^4.5.3",
+    "preact": "^8.2.5",
+    "preact-cli": "^2.0.2",
+    "preact-cli-plugin-typescript": "^0.2.2",
+    "preact-token-input": "^0.3.0",
+    "preact-widget-scripts": "^0.6.0",
+    "prettier": "^1.15.3",
+    "sass-loader": "^6.0.6",
+    "ts-jest": "^23.10.5",
+    "tslint": "^5.12.1",
+    "tslint-config-prettier": "^1.17.0",
+    "tslint-plugin-prettier": "^2.0.1",
+    "typescript": "^3.2.2",
+    "typestyle": "^2.0.1"
+  },
+  "peerDependencies": {
+    "preact": "^8.2.5"
+  },
+  "jest": {
+    "verbose": true,
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx",
+      "ts",
+      "tsx"
+    ],
+    "testEnvironment": "node",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.tsx?$",
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
+      "\\.(css|scss|less)$": "identity-obj-proxy",
+      "^react$": "preact-compat",
+      "^react-dom$": "preact-compat"
+    },
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    },
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ]
+  }
+}
