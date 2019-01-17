@@ -1293,7 +1293,12 @@ babel-plugin-transform-react-jsx@^6.24.1:
     babel-plugin-syntax-jsx "^6.8.0"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-react-remove-prop-types@^0.4.10, babel-plugin-transform-react-remove-prop-types@^0.4.5:
+babel-plugin-transform-react-remove-prop-types@^0.4.10:
+  version "0.4.23"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.23.tgz#f8677da27c9b0eb463aed1f8fd551df783ef142f"
+  integrity sha512-qMF7Il49meopQZ4d8cmLvlUnJhV8cREs5b55j1SaK7Wa+AHpg6t9SqqHFlM+qZoG4wagZIIB43Gn53Ur7J5xPg==
+
+babel-plugin-transform-react-remove-prop-types@^0.4.5:
   version "0.4.22"
   resolved "https://registry.yarnpkg.com/babel-plugin-transform-react-remove-prop-types/-/babel-plugin-transform-react-remove-prop-types-0.4.22.tgz#209f08958e17a003f524298efeb39e7ed74c6070"
   integrity sha512-X0qLmmQ0LKGTaBTEzQkCNYr6XbjiPgA+wWux4qo5fYi8+zhcyo552KOMy/UI8jA5M2u66HlLCQ7DRxhxl6YYZQ==
@@ -8329,7 +8334,7 @@ preact-cli@^2.0.2:
     which "^1.2.14"
     yargs "^8.0.1"
 
-preact-compat@^3.14.3, preact-compat@^3.17.0:
+preact-compat@^3.14.3:
   version "3.18.4"
   resolved "https://registry.yarnpkg.com/preact-compat/-/preact-compat-3.18.4.tgz#fbe76ddd30356c68e3ccde608107104946f2cf8d"
   integrity sha512-aR5CvCIDerE2Y201ERVkWQdTAQKhKGNYujEk4tbyfQDInFTrnCCa3KCeGtULZrwy0PNRBjdQa2/Za7qv7ALNFg==
@@ -8340,21 +8345,14 @@ preact-compat@^3.14.3, preact-compat@^3.17.0:
     prop-types "^15.6.2"
     standalone-react-addons-pure-render-mixin "^0.1.1"
 
-preact-habitat@^3.1.0:
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/preact-habitat/-/preact-habitat-3.2.2.tgz#f3f3dc2dd0b708ac79eddfb883708f49f6cad0d3"
-  integrity sha512-rNtLeumhsmMjVHHrn667f5M0N/NbN53N4FIJJfs1ej9qx5BmJ+Ad0oqNviDKVD8Y9qNTkK5NvNxY9DVSMnwdhQ==
-  dependencies:
-    simulant "^0.2.2"
-
-preact-render-to-string@^3.6.0, preact-render-to-string@^3.7.0, preact-render-to-string@^3.8.2:
+preact-render-to-string@^3.6.0, preact-render-to-string@^3.8.2:
   version "3.8.2"
   resolved "https://registry.yarnpkg.com/preact-render-to-string/-/preact-render-to-string-3.8.2.tgz#bd72964d705a57da3a9e72098acaa073dd3ceff9"
   integrity sha512-przuZPajiurStGgxMoJP0EJeC4xj5CgHv+M7GfF3YxAdhGgEWAkhOSE0xympAFN20uMayntBZpttIZqqLl77fw==
   dependencies:
     pretty-format "^3.5.1"
 
-preact-router@^2.5.2, preact-router@^2.5.7:
+preact-router@^2.5.2:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/preact-router/-/preact-router-2.6.1.tgz#eec60a9f2c07a1ae4fbc6604d8a0415742fbbd89"
   integrity sha512-Ql3fptQ8hiioIw5zUcWUq5NShl7yFR4e6KBUzLbGI7+HKMIgBnH+aOITN5IrY1rbr2vhKXBdHdd9nLbbjcJTOQ==
@@ -9631,11 +9629,6 @@ simplehttp2server@^2.0.0:
   dependencies:
     bin-wrapper "^4.1.0"
     logalot "^2.1.0"
-
-simulant@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/simulant/-/simulant-0.2.2.tgz#f1bce52712b6a7a0da38ddfdda7e83b20b1da01e"
-  integrity sha1-8bzlJxK2p6DaON392n6DsgsdoB4=
 
 slash@^1.0.0:
   version "1.0.0"
