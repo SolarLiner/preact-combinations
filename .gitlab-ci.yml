@@ -57,4 +57,6 @@ deploy:
   stage: deploy
   only:
     - tags
-  script: npm publish `ls preact-combinations*.tgz | head -n1`
+  script:
+    - echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}'> .npmrc
+    - npm publish `ls preact-combinations*.tgz | head -n1`
