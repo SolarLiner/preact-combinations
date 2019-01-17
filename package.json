@@ -9,7 +9,7 @@
   "scripts": {
     "test": "NODE_ENV=test jest",
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
-    "docs": "preact build --no-prerender --clean --template src/index.ejs --dest docs --service-worker false",
+    "docs": "preact build --no-prerender --clean --template src/index.ejs --dest docs --service-worker false --no-production",
     "serve": "npm run build && preact serve",
     "dev": "preact watch --template src/index.ejs",
     "build": "yarn build:js",
