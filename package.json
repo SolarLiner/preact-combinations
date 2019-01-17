@@ -18,7 +18,11 @@
     "lint": "tslint -p tsconfig.json",
     "prepack": "microbundle build"
   },
-  "keywords": ["preact","wrapper","combinations"],
+  "keywords": [
+    "preact",
+    "wrapper",
+    "combinations"
+  ],
   "author": "SolarLiner <solarliner@gmail.org>",
   "license": "MIT",
   "devDependencies": {
