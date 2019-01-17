@@ -1,6 +1,6 @@
-import { Combination as Arrayize } from "./types";
+import { Combination } from "./types";
 
-export function combine<T extends any>(props: Arrayize<T>): T[] {
+export function combine<T extends any>(props: Combination<T>): T[] {
   const keys = Object.keys(props);
   const entries = Object.values(props);
   const produced = product(...entries);
