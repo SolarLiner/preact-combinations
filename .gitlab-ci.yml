@@ -20,7 +20,7 @@ test:
 lint:
   stage: test
   allow_failure: true
-  script: yarn tslint
+  script: yarn lint
 
 build:
   stage: build
