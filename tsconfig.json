@@ -10,8 +10,7 @@
     "sourceMap": true,
     "jsx": "react",
     "jsxFactory": "h",
-    "emitDeclarationOnly": true,
-    "declaration": true
+    "allowJs": true
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["node_modules"]
