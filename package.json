@@ -88,5 +88,8 @@
       "node_modules",
       "src"
     ]
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.5.0"
   }
 }
