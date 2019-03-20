@@ -7,20 +7,13 @@ interface IProps {
   href?: string;
   onClick?(ev: Event): void;
 }
-export default function Button({
-  color,
-  elevation,
-  href,
-  children,
-  onClick
-}: RenderableProps<IProps>) {
+export default function Button({ color, elevation, href, children, onClick }: RenderableProps<IProps>) {
   const style = {
     display: "inline-block",
     backgroundColor: color,
     color: getInvertColor(color),
     padding: ".5em 1em",
-    boxShadow:
-      !!elevation && `0 ${0.2 * elevation}px ${elevation}px rgba(0,0,0,50%)`,
+    boxShadow: !!elevation && `0 ${0.2 * elevation}px ${elevation}px rgba(0,0,0,50%)`,
     borderRadius: "5px",
     cursor: "pointer",
     userSelect: "none"
