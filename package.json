@@ -7,16 +7,15 @@
   "module": "dist/preact-combinations.mjs",
   "source": "src/components/combinations/index.tsx",
   "scripts": {
-    "test": "NODE_ENV=test jest",
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "test": "NODE_ENV=test ava-ts",
     "docs": "preact build --no-prerender --clean --template src/index.ejs --dest docs --service-worker false --no-production",
-    "serve": "npm run build && preact serve",
     "dev": "preact watch --template src/index.ejs",
-    "build": "yarn build:js",
+    "build": "yarn build:js && yarn build:ts",
     "build:js": "microbundle build",
     "build:ts": "tsc",
-    "lint": "tslint -p tsconfig.json",
-    "prepack": "microbundle build"
+    "lint": "eslint src --ext .js,.ts,.tsx",
+    "lint:fix": "yarn lint --fix",
+    "prepack": "yarn build"
   },
   "keywords": [
     "preact",
@@ -33,6 +32,7 @@
     "awesome-typescript-loader": "^4",
     "eslint": "^5.15.3",
     "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-ava": "^5.1.1",
     "eslint-plugin-prettier": "^3.0.1",
     "get-contrast-ratio": "^0.1.4",
     "identity-obj-proxy": "^3.0.0",
