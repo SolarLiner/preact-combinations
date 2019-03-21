@@ -23,6 +23,7 @@ module.exports = {
     project: "./tsconfig.json"
   },
   rules: {
-    "prettier/prettier": 1
+    "prettier/prettier": 1,
+    "ava/no-ignored-test-files": 0
   }
 };
