@@ -1,1 +1,1 @@
-export type Combination<T> = { [P in keyof T]?: Array<T[P]> };
+export type Combination<T> = { [P in keyof T]?: T[P][] };

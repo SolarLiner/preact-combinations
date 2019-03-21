@@ -4,7 +4,4 @@ import { h, render } from "preact";
 
 import Host from "./components/host";
 
-render(
-  <Host/>,
-  document.querySelector('[data-widget-host="habitat"]')
-);
+render(<Host />, document.querySelector('[data-widget-host="habitat"]'));

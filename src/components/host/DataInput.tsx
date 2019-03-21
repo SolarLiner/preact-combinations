@@ -12,18 +12,9 @@ interface IProps {
 export function DataInput(props: RenderableProps<IProps>) {
   return (
     <div class={styles.input}>
-      <label
-        class={styles.label}
-        for={props.name}
-        contentEditable
-        onInput={handleKeyInput(props.onKeyChange)}
-      >
+      <label class={styles.label} for={props.name} contentEditable onInput={handleKeyInput(props.onKeyChange)}>
         {props.name}
-        <TokenInput
-          name={props.name}
-          value={props.values}
-          onChange={handleTagsInput(props.onTagsChange)}
-        />
+        <TokenInput name={props.name} value={props.values} onChange={handleTagsInput(props.onTagsChange)} />
       </label>
     </div>
   );

@@ -13,12 +13,7 @@ const containerStyle = {
   flexFlow: "row wrap"
 };
 
-export default function Combinations<T>({
-  component,
-  combinations,
-  children,
-  style
-}: RenderableProps<IProps<T>>) {
+export default function Combinations<T>({ component, combinations, children, style }: RenderableProps<IProps<T>>) {
   const props = combine(combinations);
   return (
     <div style={containerStyle}>

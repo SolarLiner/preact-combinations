@@ -7,16 +7,15 @@
   "module": "dist/preact-combinations.mjs",
   "source": "src/components/combinations/index.tsx",
   "scripts": {
-    "test": "NODE_ENV=test jest",
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
+    "test": "NODE_ENV=test ava-ts",
     "docs": "preact build --no-prerender --clean --template src/index.ejs --dest docs --service-worker false --no-production",
-    "serve": "npm run build && preact serve",
     "dev": "preact watch --template src/index.ejs",
-    "build": "yarn build:js",
+    "build": "yarn build:js && yarn build:ts",
     "build:js": "microbundle build",
     "build:ts": "tsc",
-    "lint": "tslint -p tsconfig.json",
-    "prepack": "microbundle build"
+    "lint": "eslint src --ext .js,.ts,.tsx",
+    "lint:fix": "yarn lint --fix",
+    "prepack": "yarn build"
   },
   "keywords": [
     "preact",
@@ -27,12 +26,17 @@
   "license": "MIT",
   "devDependencies": {
     "@types/jest": "^23.3.12",
+    "@typescript-eslint/parser": "^1.5.0",
+    "ava": "^1.3.1",
+    "ava-ts": "^0.25.2",
     "awesome-typescript-loader": "^4",
-    "eslint": "^4.5.0",
+    "eslint": "^5.15.3",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-ava": "^5.1.1",
+    "eslint-plugin-prettier": "^3.0.1",
     "get-contrast-ratio": "^0.1.4",
     "identity-obj-proxy": "^3.0.0",
     "if-env": "^1.0.0",
-    "jest": "^21.2.1",
     "linkstate": "^1.1.1",
     "microbundle": "^0.9.0",
     "node-sass": "^4.5.3",
@@ -44,9 +48,7 @@
     "prettier": "^1.15.3",
     "sass-loader": "^6.0.6",
     "ts-jest": "^23.10.5",
-    "tslint": "^5.12.1",
-    "tslint-config-prettier": "^1.17.0",
-    "tslint-plugin-prettier": "^2.0.1",
+    "ts-node": "^8.0.3",
     "typescript": "^3.2.2",
     "typestyle": "^2.0.1"
   },
@@ -85,5 +87,8 @@
       "node_modules",
       "src"
     ]
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^1.5.0"
   }
 }

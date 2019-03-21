@@ -22,22 +22,12 @@ export default class Host extends Component<{}, IState> {
           <div class={styles.form}>
             {data &&
               Object.entries(data).map(([key, values]) => {
-                return (
-                  <DataInput
-                    name={key}
-                    values={values}
-                    onTagsChange={this.handleTagsChange(key)}
-                  />
-                );
+                return <DataInput name={key} values={values} onTagsChange={this.handleTagsChange(key)} />;
               })}
           </div>
           {data && (
             <div>
-              <Combinations
-                component={Button}
-                combinations={data}
-                style={{ margin: "1em .5em" }}
-              >
+              <Combinations component={Button} combinations={data} style={{ margin: "1em .5em" }}>
                 Button content
               </Combinations>
             </div>
