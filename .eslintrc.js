@@ -24,6 +24,7 @@ module.exports = {
   },
   rules: {
     "prettier/prettier": 1,
-    "ava/no-ignored-test-files": 0
+    "ava/no-ignored-test-files": 0,
+    "@typescript-eslint/explicit-function-return-type": 0
   }
 };
